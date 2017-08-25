@@ -1,0 +1,77 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+	nav.links{
+		width: 100%;
+		height: 50px;
+		position: fixed;
+		display: flex;
+
+		label{
+			padding: 10px 0;
+			flex-grow: 1;
+			cursor: pointer;
+			transition: all .4s;
+			text-align: center;
+			font-family: 'Arial';
+			font-size: 100%;
+			color: #fff;
+		}
+		label:hover{
+			background-color: rgba(255, 255, 255, .2);
+		}
+	}
+
+	div.scroll{
+		display: flex;
+		width: 100vw;
+		height: 100vh;
+		overflow: hidden;
+		input{
+			display: none;
+		}
+		input#rd_bootstrap:checked ~ section.section{
+			margin-top: -100vh;
+			opacity: 1;
+		}
+		input#rd_sass:checked ~ section.section{
+			margin-top: -200vh;
+		}
+		input#rd_ruby:checked ~ section.section{
+			margin-top: -300vh;
+		}
+		input#rd_angular:checked ~ section.section{
+			margin-top: -400vh;
+		}
+	}
+
+	section.section{
+		transition: all .4s;
+		section.bloco{
+			width: 100vw;
+			height: 100vh;
+			justify-content: center;
+			align-items: center;
+			display: flex;
+			img{
+				width: 40%;
+				transition: all .5s;
+			}
+		}	
+		section#nodejs{
+			background-color: #7fbd42;
+		}
+		section#bootstrap{
+			background-color: #69f;
+		}
+		section#sass{
+			background-color: #faa;
+		}
+		section#ruby{
+			background-color: #aaa;
+		}
+		section#angular{
+			background-color: #414950;
+		}
+	}
